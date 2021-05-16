@@ -1,0 +1,98 @@
+{
+  "name": "mdnext-twin-macro",
+  "description": "This serves as the base for creating new starters for MDNEXT using NextJS & MDX",
+  "version": "1.0.1",
+  "repository": "https://github.com/domitriusclark/mdnext-twin-macro.git",
+  "author": "domitriusclark",
+  "main": "next.config.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start -p $PORT",
+    "format": "yarn format:index && yarn format:pages && yarn format:src",
+    "format:index": "prettier --write \"*.{js,json,md}\"",
+    "format:pages": "prettier --write \"pages/**/*.js\"",
+    "format:src": "prettier --write \"src/**/*.{js,md,mdx}\"",
+    "mock-server": "json-server --watch ./db.json -p 4001 -d 1000"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "latest",
+    "@emotion/cache": "latest",
+    "@emotion/core": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@mdnext/components": "^0.1.0",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "dayjs": "^1.9.8",
+    "fast-glob": "^3.2.4",
+    "fuse.js": "^6.4.1",
+    "gray-matter": "^4.0.2",
+    "json-server": "^0.16.3",
+    "next": "latest",
+    "next-mdx-remote": "^1.0.0",
+    "next-redux-saga": "^4.1.2",
+    "next-redux-wrapper": "^6.0.2",
+    "next-seo": "^4.7.3",
+    "prism-react-renderer": "^1.1.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "^3.11.0",
+    "react-redux": "^7.2.2",
+    "react-slick": "^0.27.14",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.32.4",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^2.0.2",
+    "twin.macro": "2.0.2",
+    "use-cloudinary": "^4.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "postcss": "^8.2.2",
+    "prettier": "^2.0.5"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "tailwind.config.js",
+      "preset": "emotion",
+      "debugTwProp": true,
+      "debugPlugins": false,
+      "debug": false
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write"
+    ],
+    "pages/**/*.js": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,md,mdx}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "keywords": [
+    "nextjs",
+    "mdx"
+  ],
+  "license": "ISC"
+}
