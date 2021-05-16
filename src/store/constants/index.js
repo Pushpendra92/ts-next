@@ -3,3 +3,6 @@ export const SET_ERRORS = 'SET_ERRORS';
 
 export const AUTOFILL_TERM = 'AUTOFILL_TERM';
 export const UPDATE_FIELD_TERM = 'UPDATE_FIELD_TERM';
+
+export const COROUSEL_POSITION = 'COROUSEL_POSITION';
+export const SELECT_APT_TYPE = 'SELECT_APT_TYPE';

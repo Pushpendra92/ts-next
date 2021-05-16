@@ -37,6 +37,8 @@
     "next-redux-saga": "^4.1.2",
     "next-redux-wrapper": "^6.0.2",
     "next-seo": "^4.7.3",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
     "prism-react-renderer": "^1.1.1",
     "react": "latest",
     "react-dom": "latest",
